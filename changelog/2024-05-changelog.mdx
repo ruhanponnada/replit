@@ -1,0 +1,103 @@
+---
+title: May 2024 Updates
+description: May 16, 2024 · **4 min read**
+---
+
+<Card
+  title="Ornella Altunyan"
+  icon={<img src="https://pbs.twimg.com/profile_images/1534254902343479296/dno4w0QP_400x400.jpg" alt="Ornella Altunyan" />}
+  href="https://replit.com/@ornella"
+  horizontal
+>
+  Developer Advocate
+</Card>
+
+**Welcome to the Replit Changelog.**
+
+Last month, we released many new features and improvements designed to boost your productivity, collaboration, and coding experience on Replit. Some of the key highlights include:
+
+* **[Object Storage](https://docs.replit.com/category/object-storage)** \- Store and manage unstructured data right from the workspace.
+* **Improved Deployment logs** \- Built-in search, error highlighting, 30-day persistence, and more.
+* **Merge conflict markers** \- Resolve merge conflicts in the editor during merging and rebasing.
+* **Replit Mobile App updates** \- New Recent Deployments section and tablet improvements.
+
+**Explorers**: If you want to try new features as soon as they are available, turn on the Explorer role in your [Account Settings](https://replit.com/account#roles).
+
+## Workspace
+
+### Object Storage
+
+Replit Object Storage allows you to store and manage unstructured data like media files, documents, and other content types efficiently. It's built to be resilient, handling simultaneous reads and writes, and scales seamlessly to accommodate growing application demands.
+<Frame>
+  <img src="https://docimg.replit.com/images/changelog/2024-05-16/object-storage-files.png"/>
+</Frame>
+
+Here’s what you need to know:
+
+* **Minimal configuration**: It works right out of the box in the Replit Workspace and deployment environments.
+* **Versatile options**: Ideal for storing large volumes of unstructured data such as images, user-generated content like PDFs, and data files including CSV and JSON.
+* **Integration with existing tools**: We provide libraries in Python and TypeScript to interact with Object Storage, making it accessible with minimal code.
+
+Additionally, Object Storage is powered by Google Cloud Storage, ensuring high durability and performance. This means you’ll have automated scaling and a reduction in latency.
+
+To integrate Object Storage into your project, navigate to the **Tools** menu, select **Object Storage** to open a new pane, and create a new bucket.
+<Frame>
+  <img src="https://docimg.replit.com/images/changelog/2024-05-16/object-storage-bucket.png"/>
+</Frame>
+Write, read, and upload to GCP-backed Object Storage in only a few lines of code. For more details on how to use this feature, check out the [full blog post](https://blog.replit.com/object-storage) or the [documentation](https://docs.replit.com/category/object-storage).
+
+### Improved Deployment logs
+
+We’re launching an improved logs experience for Deployments. Logs now include:
+
+* Built-in search
+* Log & error highlighting
+* 30-day persistence
+* More filters like date and log type
+* General performance enhancements (faster loads!)
+<Frame>
+  <img src="https://docimg.replit.com/images/changelog/2024-05-16/logs.png"/>
+</Frame>
+
+### CPU & RAM monitoring for Deployments
+
+We added CPU and RAM monitoring to Deployments. Now, you can easily get basic system information about your Deployment machine directly from your Replit Workspace.
+<Frame>
+  <img src="https://docimg.replit.com/images/changelog/2024-05-16/cpu_ram.png"/>
+</Frame>
+
+### Merge conflict markers
+
+Merge conflicts are now highlighted during merging and rebasing, so you can resolve them quickly, without leaving the editor.
+<Frame>
+  <img src="https://docimg.replit.com/images/changelog/2024-05-16/merge-conflicts.png"/>
+</Frame>
+
+## Mobile
+### Recent Deployments section
+
+The Replit Mobile App now has a **Recent Deployments** section at the top of the My Repls screen, which makes it easier to access and monitor your recent projects.
+
+### Tablet improvements
+
+We’ve upgraded the Replit Mobile App experience for tablet users. When you connect a keyboard, you can now access the full Replit Workspace as you would in a browser on your computer, as compared to the mobile version.
+
+Download the latest version of the Replit Mobile App in the [App Store or Google Play Store](https://replit.com/mobile).
+
+## Developer experience
+
+### `code path/to/file`
+
+You can now use `code path/to/file` to create and open new files. Opening files with `code` or `xdg-open` no longer creates a new Pane group every time. This change also applies to git commit message editing.
+
+### Programmatic access to dev URLs
+
+Now, you can get the dev URL for your Repl programmatically using the environment variable `REPLIT_DEV_DOMAIN`.
+
+## Documentation
+
+The following docs have been updated for clarity and to accompany new features:
+
+* [Object Storage](https://docs.replit.com/category/object-storage)
+* [Configure a Repl](https://docs.replit.com/replit-workspace/configuring-repl)
+* [Account inactivity](https://docs.replit.com/legal-and-security-info/account-inactivity)

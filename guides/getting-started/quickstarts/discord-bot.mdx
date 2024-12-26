@@ -1,0 +1,29 @@
+---
+title: "Discord Bot"
+description: This guide will help you set up a Discord bot in Python that tells jokes.
+---
+
+Follow these steps to set up and deploy the bot.
+
+### Step 1: Fork the template
+
+Login to Replit and then fork the [Discord bot template](https://replit.com/@replit-matt/Discord-Python-Quickstart?v=1#main.py) by selecting the **\+ Use Template** button at the top right of the page. Follow the on-screen instructions to complete the process and create your Repl.
+
+### Step 2: Set up the bot in the Discord developer portal
+
+Before you can deploy your Discord bot, you need to obtain the necessary tokens:
+
+* Navigate to your [Discord Developer Portal](https://discord.com/developers/applications) and then to your _Application's Bot_ section.
+* Under _Build-A-Bot_, select the **Reset Token** to reveal the token.
+* Copy the token and update the `DISCORD_BOT_TOKEN` secret key into your Repl.
+
+### Step 3: Test the bot in development mode
+After updating the token, run the Repl to start the bot. You should be able to execute the `/tell-me-a-joke` command in your server.
+
+### Step 4: Deploy the bot on Replit
+
+In the Workspace header, select the **Deploy** button located on the top right of your Repl, and from the available types of Deployments, choose **Reserved VM Deployments**. Select the **Set up your deployment** button, followed by the **Deploy** button to deploy your application.
+
+### Step 5: Test the bot in production mode
+
+Navigate to your Discord server and send the command `/tell-me-a-joke` to the bot to get a joke.

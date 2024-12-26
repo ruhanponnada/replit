@@ -1,0 +1,147 @@
+---
+mode: 'custom'
+---
+
+export function openSearch() {
+  document.getElementById('search-bar-entry').click();
+}
+
+<div className="relative w-full flex items-center justify-center" style={{ height: '32rem', overflow: 'hidden'}}>
+  <div id="background-div" class="absolute inset-0" style={{height: "32rem", backgroundImage: "url('https://mintlify-assets.b-cdn.net/Frame%202.svg')", backgroundSize: "cover", backgroundPosition: "center"}}></div>
+  <div style={{ position: 'absolute', textAlign: 'center', padding: '0 1rem', maxWidth: '700px' }}>
+    <div
+      className="text-gray-900 dark:text-gray-200"
+      style={{
+       fontWeight: '800',
+       fontSize: '2rem',
+       margin: '0',
+       fontFamily: 'ABC diatype'
+      }}
+    >
+      <span class="dark:text-gray-200 text-gray-900"> Welcome to Replit Docs</span>
+    </div>
+    <p className="mt-4 dark:text-gray-200 text-gray-200">Learn to create beautiful, modern web applications at </p>
+    <p className="mt-1 dark:text-gray-200 text-gray-200">the speed of thought </p>
+    <div className="flex items-center justify-center" style={{ maxWidth: '800px', margin: '0 auto' }}>
+    <button
+      type="button"
+      className="hidden w-full lg:flex items-center text-sm leading-6 rounded-lg py-3.5 pl-2.5 pr-3 shadow-sm text-gray-400 dark:text-white/50 bg-background-light dark:bg-background-dark dark:brightness-[1.1] dark:ring-1 dark:hover:brightness-[1.25] ring-1 ring-gray-400/20 hover:ring-gray-600/25 dark:ring-gray-600/30 dark:hover:ring-gray-500/30 focus:outline-primary"
+      id="home-search-entry"
+      style={{
+        marginTop: '2rem',
+        margin: '2rem auto 0',
+        width: '700px'
+      }}
+      onClick={openSearch}
+    >
+      <svg
+        className="h-4 w-4 ml-1.5 mr-3 flex-none bg-gray-500 hover:bg-gray-600 dark:bg-white/50 dark:hover:bg-white/70"
+        style={{
+         maskImage:
+           'url("https://mintlify.b-cdn.net/v6.5.1/solid/magnifying-glass.svg")',
+         maskRepeat: 'no-repeat',
+         maskPosition: 'center center',
+         marginRight: '0.5rem'
+        }}
+      />
+
+      Search or ask
+    </button>
+    </div>
+
+    <div style={{ maxWidth: '650px', margin: '0 auto', marginTop: '1rem' }}>
+      <CardGroup cols={4}>
+        <Card
+          class="intro-workspace-card"
+          title="IDE"
+          icon="code"
+          iconType="solid"
+          href="/guides/getting-started/intro-replit"
+         horizontal={true}
+        />
+        <Card
+          title="Teams"
+          icon="users"
+          iconType="solid"
+            href="/guides/category/replit-workspace"
+         horizontal={true}
+        />
+        <Card
+          title="Replit AI"
+          icon="code-commit"
+          iconType="solid"
+        href="/guides/getting-started/quickstarts/ai-slack-channel-summarizer"
+         horizontal={true}
+        />
+        <Card
+          title="Billing"
+          icon="dollar-sign"
+          iconType="solid"
+        href="/guides/getting-started/quickstarts/google-sheets-integration"
+         horizontal={true}
+        />
+      </CardGroup>
+      <CardGroup cols={3}>
+        <Card
+          title="Deployments"
+          icon="globe"
+          iconType="solid"
+          href="/guides/getting-started/quickstarts/next-js-app"
+         horizontal={true}
+        />
+        <Card
+          title="Mobile"
+          icon="mobile-screen-button"
+          iconType="solid"
+          href="/guides/category/replit-workspace"
+         horizontal
+        />
+        <Card
+          title="Extensions"
+          icon="puzzle-piece"
+          iconType="solid"
+          href="/extensions/extensions"
+         horizontal
+        />  
+      </CardGroup>
+    </div>
+  </div>
+</div>
+
+<div
+  style={{marginTop: '3rem', marginBottom: '8rem', maxWidth: '70rem', marginLeft: 'auto',
+   marginRight: 'auto', paddingLeft: '1.25rem',
+   paddingRight: '1.25rem' }}
+>
+<h2 className="text-gray-900 dark:text-gray-200 text-center" style={{marginTop: '16px' ,fontSize: '24px', marginBottom: '16px',fontWeight:'600'}}>Quick guides to get you started</h2>
+<CardGroup cols={3}>
+  <Card title="Getting Started" href="/guides/getting-started/quickstarts" icon="wrench">
+    Learn more about what Replit is and how to start creating.
+  </Card>
+  <Card title="Secrets" href="/guides/replit-workspace/introduction-to-workspace" icon="lock">
+    Sensitive information, such as credentials and API keys, should be separate from your code. This way, you can share your code without giving other users access to your personal data or linked accounts.
+  </Card>
+  <Card title="Deployments" href="/guides/getting-started/intro-replit" icon="globe">
+    Web pages written in HTML, CSS, and JavaScript can be deployed on Replit. HTML/CSS/JS repls are given a unique URL that can be shared with your friends, family, peers, and clients.
+  </Card>
+</CardGroup>
+<CardGroup cols={2}>
+  <Card title="Databases" href="/guides/getting-started/quickstarts/webscrape-and-slack-notifications" icon="database">
+    Replit Databases, PostgreSQL, and Object Storage
+  </Card>
+  <Card title="Installing Packages" href="/guides/getting-started/quickstarts/webscrape-and-slack-notifications" icon="box">
+    Replit will install most available Python and Javascript packages using the universal package manager.
+  </Card>
+</CardGroup>
+<h2 className="text-gray-900 dark:text-gray-200 text-center" style={{marginTop: '64px', fontSize: '24px', marginBottom: '16px', fontWeight:'600'}}>Helpful resources</h2>
+
+<CardGroup cols={2}>
+ <Card title="Create a Replit" href="https://replit.com/new" icon="bolt">
+    Make something great today with Replit!
+  </Card>
+  <Card title="Replit Support" href="https://replit.com/support" icon="circle-question">
+    Get in touch with a team member to help you out.
+  </Card>
+</CardGroup>
+
+</div>

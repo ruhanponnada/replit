@@ -1,0 +1,63 @@
+---
+title: "Webscrape & Slack Notification Bot"
+description: This guide will walk you through the steps to scrape HackerNews and send data to a given Slack channel of your choice.
+---
+
+## Features
+
+* Fetches top Hacker News stories
+* Schedule for your app to run at fixed time intervals. E.g., "Run every Tuesday at 3:00 PM"
+
+### Step 1: Fork the template
+
+Login to Replit and then fork the [Hacker news webscraper template](https://replit.com/@replit-matt/Hacker-News-Alert-Slackbot?v=1#app.py) by selecting the **\+ Use Template** button at the top right of the page. Follow the on-screen instructions to complete the process and create your Repl.
+
+### Step 2: Create the Slack Bot in the Slack developer portal)
+
+Follow the instructions below to create and install a Slack app into your Slack workspace:
+
+1. Navigate to [**Your Apps**](https://api.slack.com/apps) page and select **Create an App**.
+2. Choose **From an app manifest** from the options.
+3. Select a Workspace from the dropdown menu and then select **Next**.
+4. Replace the JSON content with the content of the [manifest.json](https://replit.com/@replit-matt/Hacker-News-Alert-Slackbot?v=1#manifest.json) file, then select **Next**.
+5. Review and configure your **OAuth** permissions, **Features**, and **Settings**, then select **Create**.
+6. Select **Install the App**.
+
+Note: You might need to request approval to install the App based on your organization's policies.
+
+### Step 3: Get tokens from Slack developer portal
+
+Follow these instructions to obtain the necessary tokens:
+
+1. **SLACK\_BOT\_TOKEN**: Navigate to your [Slack App](https://api.slack.com/apps); in the left nav, look for Settings -> Install App, you'll find OAuth Tokens for Your Workspace. Copy the **Bot User OAuth Token** value and use it in your Repl to update the `SLACK_BOT_TOKEN` Secret key.
+2. **SLACK\_SIGNING\_SECRET**: On your [Slack App page](https://api.slack.com/apps), in the left nav, look for Settings -> Basic Information. In the _App Credentials_ section, look for **Signing Secret** and use it in your Repl to update the `SLACK_SIGNING_SECRET` Secret key.
+3. **SLACK\_APP\_TOKEN** On your [Slack App page](https://api.slack.com/apps), in the left nav, look for Settings -> Basic Information. In the _App-Level Tokens_ section, select **Generate Token and Scopes**. Add a token name of your choice and select **Add Scope**. Select the permissions and **Generate**. Now, copy the token and use it in your Repl to update the `SLACK_APP_TOKEN` Secret key.
+
+Save all of these secrets to Replit by opening the "Secrets" tab in the Replit Workspace and pasting the values in.
+
+### Step 4: Configure your App
+
+To configure your App for Slack integration, follow the instructions below:
+
+1. Navigate to your Slack profile, select your profile picture, and use the ellipsis menu next to _View as_ to select the **Copy member ID**. You'll use this ID to replace the value for **ALERT\_UIDS**.
+2. Get back to your repl created from Step 1, navigate to the **app.py** file, and locate the following lines:
+```
+KEYWORDS = ["h"]
+ALERT_UIDS = ["U06C34217C5"]
+# max 500
+NUM_TOP_STORIES = 25
+```
+3. Replace the value for **ALERT\_UIDS** with your Slack member ID that was copied earlier and adjust **KEYWORDS** and **NUM\_TOP\_STORIES** based on your preferences.
+4. Save the changes and select **Run**.
+
+### Step 4: Deploy your App
+
+In the Workspace header, select the **Deploy** button. From the available types of Deployment, choose [Scheduled Deployments](/cloud-services/deployments/scheduled-deployments). Then, select the **Set up your deployment** button. Add your schedule and select **Deploy** to deploy your application.
+
+Your App will be deployed and will automatically run at your scheduled time.
+
+### **Further customization**
+* Expand functionality by adding more keywords or refining matching criteria.
+* Personalize the alert message format or include additional information.
+* Enhance error handling or implement logging as needed.
+* Summarize the articles using GPT-4.

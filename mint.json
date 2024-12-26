@@ -1,0 +1,145 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "Replit",
+  "logo": {
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg"
+  },
+  "favicon": "/favicon.png",
+  "colors": {
+    "primary": "#ec4e02",
+    "light": "#ec4e02",
+    "dark": "#ec4e02",
+    "anchors": {
+      "from": "#ec4e02",
+      "to": "#ec4e02"
+    }
+  },
+  "primaryTab": {
+    "name": "Home"
+  },
+  "topbarLinks": [
+    {
+      "name": "Contact Sales",
+      "url": "https://replit.com/teams#inlineForm"
+    },
+    {
+      "name": "Log In",
+      "url": "https://replit.com/login"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Start Building",
+    "url": "https://replit.com/signup",
+    "arrow": false,
+    "style": "roundedRectangle"
+  },
+
+  "tabs": [
+    {
+      "name": "Guides",
+      "url": "guides"
+    },
+    {
+      "name": "Extensions",
+      "url": "extensions"
+    },
+    {
+      "name": "API Reference",
+      "url": "api-reference"
+    },
+    {
+      "name": "Changelog",
+      "url": "changelog"
+    }
+  ],
+  "anchors": [
+    {
+      "name": "About",
+      "icon": "question",
+      "url": "https://replit.com/about"
+    },
+    {
+      "name": "Support",
+      "icon": "headset",
+      "url": "https://replit.com/support"
+    },
+    {
+      "name": "Community",
+      "icon": "users",
+      "url": "https://replit.com/community"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Docs",
+      "pages": ["home"]
+    },
+    {
+      "group": "Getting Started",
+      "pages": [
+        "guides/getting-started/intro-replit",
+        {
+          "group": "Quickstarts",
+          "pages": [
+            "guides/getting-started/quickstarts",
+            "guides/getting-started/quickstarts/webscrape-and-slack-notifications",
+            "guides/getting-started/quickstarts/ai-slack-channel-summarizer",
+            "guides/getting-started/quickstarts/google-sheets-integration",
+            "guides/getting-started/quickstarts/discord-bot",
+            "guides/getting-started/quickstarts/next-js-app"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Replit Workspace",
+      "pages": [
+        "guides/category/replit-workspace",
+        "guides/replit-workspace/introduction-to-workspace"
+      ]
+    },
+    {
+      "group": "FAQ",
+      "pages": ["guides/faq"]
+    },
+    {
+      "group": "Recent posts",
+      "pages": [
+        "changelog/updates",
+        "changelog/2024-05-changelog",
+        "changelog/2024-04-changelog"
+      ]
+    },
+    {
+      "group": "API Documentation",
+      "pages": ["api-reference/introduction"]
+    },
+    {
+      "group": "Getting Started",
+      "pages": [
+        "extensions/extensions",
+        "extensions/templates",
+        "extensions/key-concepts"
+      ]
+    },
+    {
+      "group": "FAQ",
+      "pages": ["extensions/faq"]
+    },
+    {
+      "group": "Endpoint Examples",
+      "pages": [
+        "api-reference/endpoint/get",
+        "api-reference/endpoint/create",
+        "api-reference/endpoint/delete"
+      ]
+    }
+  ],
+  "footerSocials": {
+    "x": "https://twitter.com/replit",
+    "facebook": "https://facebook.com/repl.it",
+    "instagram": "https://instagram.com/repl.it",
+    "linkedin": "https://www.linkedin.com/company/repl-it"
+  }
+}

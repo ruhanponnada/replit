@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'ABC diatype';
+    src: url('https://cdn.replit.com/dotcom/fonts/ABCDiatypePlusVariable.woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+h1,
+h2,
+h3 {
+  font-family: 'ABC diatype';
+  letter-spacing: normal !important;
+}
+
+#card-group {
+  background-color: #F8F8F9;
+}
+
+.card {
+  background-color: transparent !important;
+}

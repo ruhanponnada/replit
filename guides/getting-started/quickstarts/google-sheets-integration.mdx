@@ -1,0 +1,52 @@
+---
+title: "Google Sheets Integration"
+description: This guide will walk you through the steps to pull data from Google Sheets so you can process it or serve it as a web application.
+---
+
+
+## Features
+
+* Fetches data from Google Sheets
+* Pulls data into a [pandas](https://pandas.pydata.org/docs/) dataframe
+* Supports both public and private Google Sheets
+* Flexible configuration for data extraction
+
+### Step 1: Fork the template
+Login to Replit and then fork the [Google Sheets to HTML Renderer](https://replit.com/@replit-matt/Google-Sheets-to-API#README.md) by selecting the **\+ Use Template** button at the top right of the page. Follow the onscreen instructions to complete the fork and create a Repl.
+
+### Step 2: Configure your Repl (public Google Sheet)
+
+To configure and run the App, follow the instructions below:
+
+1. Open the `main.py` file in your Repl. Replace the `WORKSHEET_URL` variable with the URL of your Google Sheets worksheet.
+2. (Optional) - If your worksheet is public, set `require_auth=False`.
+3. Select the **Run** button in your Repl to execute the code. This will render the HTML page containing the data from your Google Sheet. Note that this process does not require any authentication.
+4. Once the App is running, you can access the rendered HTML by navigating to the appropriate endpoint in your browser.
+
+note
+
+* _Worksheet_ refers to a _tab_ on a Google Sheet. If you only have one tab, you can copy the URL; if not, select the proper tab to get its URL.
+* If you have sensitive data in your sheet, you'll need to enable the Google Sheets API.
+
+### Step 3: Configure your Repl (private Google Sheet)
+
+In this step, you'll configure Google Sheets API access.
+
+If your sheet is private or contains sensitive data, you must enable the _Drive_ and _Spreadsheets_ APIs. To enable the APIs, use [enable API access for a project](https://docs.gspread.org/en/v6.0.0/oauth2.html#enable-api-access-for-a-project) documentation. Next, follow the steps below to generate a service account to run the App and render HTML content.
+
+1. Generate a [service account](https://docs.gspread.org/en/v6.0.0/oauth2.html#for-bots-using-service-account) for your project. This allows your App to access Google Sheets on your behalf. At the end of this process, a JSON file will be downloaded.
+2. Open the JSON file you just downloaded and copy its contents. Paste all the content into the `SERVICE_ACCOUNT_JSON` Secret variable in your Repl.
+3. Share your Google Sheet with the email address associated with the service account (found in the JSON file).
+4. You can update the App configuration by navigating to the `main.py` file in your Repl and locating the `get_worksheet_as_dataframe` function call. Replace `WORKSHEET_URL` with the URL of your Google Sheets document. Adjust parameters like require\_auth, skip\_rows, skip\_cols, and has\_header based on your sheet's configuration.
+5. Save your changes and run the App. Your sheet data should appear in the console. Once the App is running, you can access the rendered HTML by navigating to the appropriate endpoint in your browser.
+
+### Step 4: Deploy your application
+
+In the Workspace header, select the **Deploy** button located on the top right of your Repl, and from the available types of Deployments, choose **Reserved VM Deployments**. Select the **Set up your deployment** button, followed by the **Deploy** button to deploy your application.
+
+## Further customization
+
+* Modify the HTML rendering logic in FastAPI to customize the appearance of the rendered data.
+* Implement additional endpoints or functionality to enhance the App's capabilities.
+* Secure your App further by implementing authentication or authorization mechanisms if needed.
+* Explore [FastAPI documentation](https://devdocs.io/fastapi/) to leverage more features and optimize your App's performance.

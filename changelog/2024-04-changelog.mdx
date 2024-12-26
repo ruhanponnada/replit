@@ -1,0 +1,114 @@
+---
+title: April 2024 Updates
+description: April 17, 2024 · 5 min read
+---
+
+<Card
+  title="Ornella Altunyan"
+  icon={<img src="https://pbs.twimg.com/profile_images/1534254902343479296/dno4w0QP_400x400.jpg" alt="Ornella Altunyan" />}
+  href="https://replit.com/@ornella"
+  horizontal
+>
+  Developer Advocate
+</Card>
+
+**Welcome to the Replit Changelog.**
+
+Last month, we released many new features and improvements designed to boost your productivity, collaboration, and coding experience on Replit. Some of the key highlights include:
+
+* **Replit Teams early access** \- [Sign up for the waitlist today](https://replit.com/teams) to join the beta of Replit Teams.
+* **[Scheduled Deployments](https://docs.replit.com/cloud-services/deployments/scheduled-deployments)** \- Schedule tasks without deep technical setup.
+* **[Advanced port configuration](https://docs.replit.com/replit-workspace/ports)** \- Explicit port mappings, improved port management, and more.
+
+**Explorers**: If you want to try new features as soon as they are available, turn on the Explorer role in your [Account Settings](https://replit.com/account#roles).
+
+## Workspace
+
+### Scheduled Deployments
+
+Scheduled Deployments are now available in the **Deployments Pane**.
+
+We’ve made it easier to schedule tasks without deep technical setup. Simply tell Replit when to run your application using natural language, such as "Run this script every Tuesday and Thursday at 3:00 PM." We’ll handle the conversion into the necessary cron expressions. You can use Scheduled Deployments to automate Slack analytics reports, periodic data cleanups, routine system health checks, and more. Currently, Scheduled Deployments support a configuration of 1vCPU and 2 GiB RAM and allow up to 11 hours for the longest job, with no concurrency limits on the jobs scheduled.
+
+With Scheduled Deployments, you can more efficiently automate and manage applications that need to be redeployed at specific, granular intervals. To read more and learn about pricing, check out the full [blog post](https://blog.replit.com/scheduled-deployments).
+
+### Replit Teams early access
+
+We’re reinventing how software is developed collaboratively and with AI, so that every part of your team can have the tools to build and ship something great.
+<Frame>
+  <img src="https://docimg.replit.com/images/changelog/2024-04-17/teams-image.png"/>
+</Frame>
+The [waitlist](https://replit.com/teams) is now open for early access to the Replit Teams beta. Here’s what you can expect from Replit Teams:
+
+* **Organizational intelligence**: Unleash AI-powered code completion, chat, and retrieval-augmented generation (RAG) across your team.
+* **Ultra-fast workspaces**: Access 8vCPUs and 16GB RAM machines, ensuring a smooth workspace experience for your whole team.
+* **Shared deployments**: Deployments that can be managed and redeployed by anyone on the team, streamlining your workflow.
+* **Living repos**: With a dynamic, collaborative dashboard, you can see who’s coding, get a top-level view of in-progress work, and effortlessly dive back into tasks.
+* **Replit-native collaboration**: Speed up code reviews and merges with tools designed for efficient teamwork.
+* **Role-based access control (RBAC)**: Keep your projects secure with access controls that allow you to easily manage team roles and permissions.
+* **Centralized billing**: Simplify your team’s operations with a straightforward billing system for deployments, compute resources, and more, all in one place.
+
+Read more on [our blog](https://blog.replit.com/teams-beta), and [join the waitlist](https://replit.com/teams) today.
+
+### Advanced port configuration
+New port configuration features make it easier to work on complex or multiple services within a single project:
+
+* **Explicit port mappings**: Ports consistently retain their mapping once they are opened. This change is reflected in the `.replit` configuration file, which also stores other project settings. This simplifies the setup for projects that involve running multiple services.
+* **Improved port visibility and management**: You’ll get a notification in the Shell or Console whenever a port is opened. There are options to view, configure, or stop exposing the port, which improves control over which ports are accessible.
+<Frame>
+  <img src="https://docimg.replit.com/images/changelog/2024-03-14/ports-networking.png"/>
+</Frame>
+* **Localhost port handling**: To support developers who utilize localhost, there is now a popup notification that allows you to expose localhost ports if you choose.
+* **Webview port switching**: The Webview now allows you to switch between active ports easily, facilitating the testing and use of applications that listen on multiple ports simultaneously.
+<Frame>
+  <img src="https://docimg.replit.com/images/changelog/2024-03-14/webview-ports.png"/>
+</Frame>
+
+Read more about ports and the new features on [the blog](https://blog.replit.com/ports).
+
+## Mobile
+
+The latest release of the [Replit Mobile App](https://docs.replit.com/replit-workspace/replit-mobile-app) contains new features and improvements, including:
+
+* Persistent Workspace layout that automatically restores where you left off
+* Shortcuts to recent Deployments are shown on the **My Repls** page
+* Bug fixes and more
+
+Download the latest version of the Replit Mobile App in the [App Store or Google Play Store](https://replit.com/mobile).
+
+## Developer experience
+
+### Nix packages saved[​](/updates#nix-packages-saved "Direct link to Nix packages saved")
+
+You can now build your Nix environment once and enjoy it always (even across forks). If you ever added a package to `replit.nix` and noticed that your Repl spent a long time Building Nix Environment on startup, this will now start instantly (after one last build).
+
+Whatever you build with Nix counts against your storage quota. Check how much disk space Nix packages are using in the **Storage** details of the **Resources** menu. If you select the trash can, you can clear all storage used by Nix packages. We still maintain a very large cache of Nix packages, and using any of these prebuilt packages does not count against your storage quota.
+<Frame>
+  <img src="https://docimg.replit.com/images/changelog/2024-04-17/nix-packages-saved.png"/>
+</Frame>
+
+## Documentation
+The following docs have been updated for clarity and to accompany new features:
+
+* [Replit FAQ](https://docs.replit.com/faq/)
+* [Quickstart Guides](https://docs.replit.com/getting-started/Quickstarts/Python/deploy-flask-app)
+* [Workspace docs](https://docs.replit.com/category/replit-workspace) with [Additional Resources](https://docs.replit.com/category/additional-resources)
+* [Scheduled Deployments](https://docs.replit.com/cloud-services/deployments/scheduled-deployments)
+* [Static Deployments](https://docs.replit.com/cloud-services/deployments/static-deployments)
+* [SSH](https://docs.replit.com/replit-workspace/ssh)
+
+## Social highlights
+
+### Developer Day
+
+On April 2, we hosted our second annual Replit Developer Day. If you missed the livestream, watch it on demand and catch up on the highlights on [our blog](https://blog.replit.com/devday-recap).
+
+### LLMs for Code Repair
+
+At Developer Day, we also announced Code Repair, our state-of-the-art AI model and the world’s first low-latency code repair AI agent. Code Repair automates debugging 20 common diagnostics that account for 60% of [Language Server Protocol (LSP)](https://en.wikipedia.org/wiki/Language_Server_Protocol) errors. To learn more, read the [full blog post](https://blog.replit.com/code-repair).
+
+## General updates
+
+### Updates to our Terms of Service
+
+As part of our website refresh, we have rewritten our Terms of Service to be more user-friendly. Please take a moment to review the updated [Terms of Service](https://replit.com/site/terms). By continuing to use Replit, you accept these updated Terms. If you have any questions, please contact us via the link at the bottom of the Terms of Service page. Thank you for being a part of the Replit community!
